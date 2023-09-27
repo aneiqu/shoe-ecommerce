@@ -8,5 +8,5 @@ Resposnive shoe ecommerce project made using React
 
 ### Styling
 
-**Tailwindcss**: General styling.
+**Tailwindcss**: General styling. <br>
 **MaterialUI**: Icons.
