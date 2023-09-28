@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import LargeDisplay from "./LargeDisplay";
-import SmallDisplay from "./SmallDisplay";
+import LargeDisplay from "./NavbarLarge/LargeDisplay";
+import SmallDisplay from "./NavbarSmall/SmallDisplay";
 
 export default function Navbar() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -23,10 +23,7 @@ export default function Navbar() {
   const Navbar = screenWidth >= 640 ? <LargeDisplay /> : <SmallDisplay />;
 
   return (
-    <nav className='flex justify-between w-screen h-12 bg-slate-800 items-center md:h-16'>
-      <div className='m-2'>
-        <p className='text-2xl text-white font-bold'>Some logo</p>
-      </div>
+    <nav className='flex justify-between w-screen h-16 items-center shadow-md'>
       {Navbar}
     </nav>
   );
