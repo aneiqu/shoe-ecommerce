@@ -3,14 +3,18 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import WomenLarge from "./WomenLarge";
 import MenLarge from "./MenLarge";
+import Logo from "../../../Images/Logo/Logo.png";
+import { Link } from "react-router-dom";
 
 export default function LargeDisplay() {
   return (
     <div className='flex flex-row items-center w-full justify-between'>
       <div className='w-1/7'>
-        <img src='./' className='m-2'></img>
+        <Link to='/'>
+          <img src={Logo} className='m-2 h-14 w-14' />
+        </Link>
       </div>
-      <div className='flex flex-row items-center justify-around w-1/4'>
+      <div className='flex flex-row items-center justify-around w-1/4 h-16'>
         <MenLarge />
         <WomenLarge />
       </div>
@@ -22,18 +26,18 @@ export default function LargeDisplay() {
             placeholder='Search'
           ></input>
         </form>
-        <a href='./' className='px-2 '>
+        <Link to='/cart' className='px-2 '>
           <ShoppingBagOutlinedIcon
             fontSize='large'
             className='scale-90 hover:fill-slate-500 hover:scale-125 transition-all duration-150'
           />
-        </a>
-        <a href='./' className='px-2 '>
+        </Link>
+        <Link to='/myaccount' className='px-2 '>
           <PersonOutlineOutlinedIcon
             fontSize='large'
             className='scale-90 hover:fill-slate-500 hover:scale-125 transition-all duration-150'
           />
-        </a>
+        </Link>
       </div>
     </div>
   );

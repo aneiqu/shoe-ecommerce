@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import LargeDisplay from "./NavbarLarge/LargeDisplay";
-import SmallDisplay from "./NavbarSmall/SmallDisplay";
+import DisplayLarge from "./NavbarLarge/DisplayLarge";
+import DisplaySmall from "./NavbarSmall/DisplaySmall";
 
 export default function Navbar() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   // Changing what is displayed based on current screenwidth
-  const Navbar = screenWidth >= 640 ? <LargeDisplay /> : <SmallDisplay />;
+  const Navbar = screenWidth >= 640 ? <DisplayLarge /> : <DisplaySmall />;
 
   return (
     <nav className='flex justify-between w-screen h-16 items-center shadow-md'>
