@@ -3,16 +3,14 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import WomenLarge from "./WomenLarge";
 import MenLarge from "./MenLarge";
-import Logo from "../../../Images/Logo/Logo.png";
 import { Link } from "react-router-dom";
+import Logo from "../../Re-usable/Logo";
 
 export default function LargeDisplay() {
   return (
     <div className='flex flex-row items-center w-full justify-between'>
       <div className='w-1/7'>
-        <Link to='/'>
-          <img src={Logo} className='m-2 h-14 w-14' />
-        </Link>
+        <Logo />
       </div>
       <div className='flex flex-row items-center justify-around w-1/4 h-16'>
         <MenLarge />

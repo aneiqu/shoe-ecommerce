@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
 import MyAccount from "./Components/Account/MyAccount";
+import RegisterAccount from "./Components/Account/RegisterAccount";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -14,6 +16,7 @@ root.render(
         <Route path='/' element={<App />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/myaccount' element={<MyAccount />} />
+        <Route path='/myaccount/register' element={<RegisterAccount />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>

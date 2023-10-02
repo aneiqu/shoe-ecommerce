@@ -1,10 +1,9 @@
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import Logo from "../../../Images/Logo/Logo.png";
 import MenSmall from "./MenSmall";
 import WomenSmall from "./WomenSmall";
-import { useState } from "react";
-
+import React, { useState } from "react";
+import Logo from "../../Re-usable/Logo";
 export default function SmallMenu() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,10 +12,10 @@ export default function SmallMenu() {
   };
 
   return (
-    <div className='group'>
-      <a className='m-2 active:bg-slate-300' onClick={toggleVisibility}>
+    <div className='group z-10'>
+      <div className='m-2 active:bg-slate-300' onClick={toggleVisibility}>
         <MenuOutlinedIcon fontSize='large' />
-      </a>
+      </div>
       <div
         className={`absolute left-0 top-0 w-0 h-screen bg-white duration-200 ${
           isVisible ? "visible w-[100%]" : "invisible"
@@ -25,12 +24,9 @@ export default function SmallMenu() {
         <div>
           <div className='flex justify-between h-16 items-center'>
             <div className='flex w-11/12 justify-center'>
-              <img src={Logo} className='m-1 w-12 h-12'></img>
+              <Logo />
             </div>
-            <a
-              className='m-4 active:bg-slate-300 w-1/12 flex align-middle'
-              onClick={toggleVisibility}
-            >
+            <a className='m-4 active:bg-slate-300' onClick={toggleVisibility}>
               <CloseOutlinedIcon fontSize='large' className='' />
             </a>
           </div>
