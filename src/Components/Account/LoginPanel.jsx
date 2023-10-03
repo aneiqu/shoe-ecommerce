@@ -1,19 +1,29 @@
 import { Button, InputAdornment, TextField } from "@mui/material";
-import Logo from "../Re-usable/Logo";
 import { Link } from "react-router-dom";
 
-import MailInput from "../Re-usable/MailInput";
-import PasswordInput from "../Re-usable/PasswordInput";
+import MailInput from "../Re-usable/Inputs/MailInput";
+import PasswordInput from "../Re-usable/Inputs/PasswordInput";
+import FormFooter from "../Re-usable/FormFooter";
 
-export default function LoginPanel() {
+export default function LoginPanel({ setLogged }) {
+  const handleLogin = () => {
+    setLogged(true);
+    localStorage.setItem("logged", true);
+  };
+
   return (
     <div className='flex flex-col w-screen items-center pt-10'>
       <form className='flex flex-col w-min items-center'>
         <span className='text-xl m-2'>Welcome back!</span>
         <MailInput />
-        <PasswordInput />
+        <PasswordInput forgot={true} />
 
-        <Button type='submit' className='bg-black m-2' variant='contained'>
+        <Button
+          type='submit'
+          className='bg-black m-2'
+          variant='contained'
+          onClick={handleLogin}
+        >
           Log in
         </Button>
       </form>
@@ -31,27 +41,7 @@ export default function LoginPanel() {
           </Button>
         </Link>
       </div>
-      <div className='flex flex-row w-2/3 justify-around items-center'>
-        <div className='w-1/3 flex justify-center'>
-          <span className='text-sm text-center border-b-2 border-transparent transition-all duration-100 active:bg-slate-300 md:hover:border-black cursor-pointer'>
-            About us
-          </span>
-        </div>
-
-        <div className='w-1/3 flex justify-center'>
-          <span className='text-sm text-center border-b-2 border-transparent transition-all duration-100 active:bg-slate-300 md:hover:border-black cursor-pointer'>
-            Privacy Policy
-          </span>
-        </div>
-        <div className='w-1/3 flex justify-center'>
-          <span className='text-sm text-center border-b-2 border-transparent transition-all duration-100 active:bg-slate-300 md:hover:border-black cursor-pointer'>
-            Terms and Conditions
-          </span>
-        </div>
-      </div>
-      <div className='pt-10'>
-        <Logo />
-      </div>
+      <FormFooter />
     </div>
   );
 }

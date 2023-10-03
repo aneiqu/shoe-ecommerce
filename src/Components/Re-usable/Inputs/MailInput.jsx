@@ -11,18 +11,12 @@ export default function MailInput({ returnEmail }) {
 
   return (
     <TextField
+      value={emailValue}
       className='w-max'
       variant='filled'
       label='E-Mail Address'
       margin='dense'
       onChange={(e) => setEmailValue(e.target.value)}
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position='start'>
-            <MailOutlinedIcon />
-          </InputAdornment>
-        ),
-      }}
     />
   );
 }
