@@ -9,4 +9,4 @@ Resposnive shoe ecommerce project made using React
 ### Styling
 
 **Tailwindcss**: General styling. <br>
-**MaterialUI**: Icons.
+**MaterialUI**: Icons, elements.
