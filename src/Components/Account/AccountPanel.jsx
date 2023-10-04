@@ -13,51 +13,67 @@ import StreetInput from "../Re-usable/Inputs/Address/StreetInput";
 import CountryInput from "../Re-usable/Inputs/Address/CountryInput";
 import ZipInput from "../Re-usable/Inputs/Address/ZipInput";
 import CityInput from "../Re-usable/Inputs/Address/CityInput";
+import PanelLarge from "./PanelLarge/PanelLarge";
+import { useEffect, useState } from "react";
+import PanelSmall from "./PanelSmall/PanelSmall";
 
 export default function AccountPanel({ setLogged }) {
-  const handleLogOut = () => {
-    setLogged(false);
-    localStorage.setItem("logged", false);
-  };
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  return (
-    <div className='pt-2'>
-      <div className='flex flex-wrap md:flex-nowrap'>
-        <form className='flex flex-col w-screen items-center'>
-          <span className='text-lg mt-4'>Personal information</span>
-          <NameInput />
-          <MiddleNameInput />
-          <LastNameInput />
-          <MailInput />
-          <PhoneInput />
-          <BirthInput />
-          <GenderInput />
-          <Button type='submit' variant='outlined' className='m-2'>
-            Save
-          </Button>
-        </form>
-        <form className='flex flex-col w-screen items-center'>
-          <span className='text-lg mt-4'>Address</span>
-          <StreetInput />
-          <ZipInput />
-          <CityInput />
-          <CountryInput />
-          <Button type='submit' variant='outlined' className='m-2'>
-            Save Address
-          </Button>
-        </form>
-      </div>
-      <div className='flex justify-center'>
-        <Button
-          color='inherit'
-          className='w-3/5 md:w-2/5 m-5 bg-black text-white'
-          variant='contained'
-          onClick={handleLogOut}
-        >
-          Log out
-        </Button>
-      </div>
-      <FormFooter logoEnabled={false} />
-    </div>
-  );
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const Panel = screenWidth >= 640 ? <PanelLarge /> : <PanelSmall />;
+
+  return <div>{Panel}</div>;
+
+  // return (
+  //   <div className='pt-2 flex flex-col items-center'>
+  //     <div className='flex flex-wrap md:flex-nowrap md:w-2/3'>
+  //       <form className='flex flex-col w-screen items-center'>
+  //         <span className='text-lg mt-4'>Personal information</span>
+  //         <NameInput />
+  //         <MiddleNameInput />
+  //         <LastNameInput />
+  //         <MailInput />
+  //         <PhoneInput />
+  //         <BirthInput />
+  //         <GenderInput />
+  //         <Button variant='outlined' className='m-2'>
+  //           Save
+  //         </Button>
+  //       </form>
+  //       <form className='flex flex-col w-screen items-center'>
+  //         <span className='text-lg mt-4'>Address</span>
+  //         <StreetInput />
+  //         <ZipInput />
+  //         <CityInput />
+  //         <CountryInput />
+  //         <Button variant='outlined' className='m-2'>
+  //           Save Address
+  //         </Button>
+  //       </form>
+  //     </div>
+  //     <div className='flex justify-center w-2/5'>
+  //       <Button
+  //         color='inherit'
+  //         className='w-3/5 md:w-2/5 m-5 bg-black text-white'
+  //         variant='contained'
+  //         onClick={handleLogOut}
+  //       >
+  //         Log out
+  //       </Button>
+  //     </div>
+  //     <FormFooter logoEnabled={false} />
+  //   </div>
+  // );
 }

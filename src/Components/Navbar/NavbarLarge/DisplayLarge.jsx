@@ -1,10 +1,10 @@
 import SearchIcon from "@mui/icons-material/Search";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import WomenLarge from "./WomenLarge";
 import MenLarge from "./MenLarge";
 import { Link } from "react-router-dom";
 import Logo from "../../Re-usable/Logo";
+import NavMyAccountLarge from "./NavMyAccountLarge";
 
 export default function LargeDisplay() {
   return (
@@ -16,7 +16,7 @@ export default function LargeDisplay() {
         <MenLarge />
         <WomenLarge />
       </div>
-      <div className='w-2/4 flex flex-row justify-end items-center'>
+      <div className='w-2/4 flex flex-row justify-end items-center h-16'>
         <form className='relative px-2'>
           <SearchIcon fontSize='medium' className='absolute my-1.5 ml-0.5' />
           <input
@@ -24,18 +24,17 @@ export default function LargeDisplay() {
             placeholder='Search'
           ></input>
         </form>
-        <Link to='/cart' className='px-2 '>
-          <ShoppingBagOutlinedIcon
-            fontSize='large'
-            className='scale-90 hover:fill-slate-500 hover:scale-125 transition-all duration-150'
-          />
-        </Link>
-        <Link to='/myaccount' className='px-2 '>
-          <PersonOutlineOutlinedIcon
-            fontSize='large'
-            className='scale-90 hover:fill-slate-500 hover:scale-125 transition-all duration-150'
-          />
-        </Link>
+        <div className='flex items-center h-full'>
+          <NavMyAccountLarge />
+        </div>
+        <div className='flex items-center h-full'>
+          <Link to='/cart' className='px-2'>
+            <ShoppingBagOutlinedIcon
+              fontSize='large'
+              className='scale-90 hover:fill-slate-500 hover:scale-125 transition-all duration-150'
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );

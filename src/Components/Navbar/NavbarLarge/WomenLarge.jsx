@@ -8,31 +8,31 @@ export default function WomenLarge() {
         <div className='flex flex-row justify-around'>
           <a
             href='./'
-            className='hover:scale-110 duration-75 hover:font-bold  text-xl'
+            className='hover:scale-110 group-hover:duration-75 hover:font-bold  text-xl'
           >
             Sport
           </a>
           <a
             href='./'
-            className='hover:scale-110 duration-75 hover:font-bold  text-xl'
+            className='hover:scale-110 group-hover:duration-75 hover:font-bold  text-xl'
           >
             Elegant
           </a>
           <a
             href='./'
-            className='hover:scale-110 duration-75 hover:font-bold  text-xl'
+            className='hover:scale-110 group-hover:duration-75 hover:font-bold  text-xl'
           >
             Casual
           </a>
           <a
             href='./'
-            className='hover:scale-110 duration-75 hover:font-bold  text-xl'
+            className='hover:scale-110 group-hover:duration-75 hover:font-bold  text-xl'
           >
             Heavy
           </a>
           <a
             href='./'
-            className='hover:scale-110 duration-75 hover:font-bold  text-xl'
+            className='hover:scale-110 group-hover:duration-75 hover:font-bold  text-xl'
           >
             Sandals
           </a>
