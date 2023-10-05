@@ -17,7 +17,7 @@ import PanelLarge from "./PanelLarge/PanelLarge";
 import { useEffect, useState } from "react";
 import PanelSmall from "./PanelSmall/PanelSmall";
 
-export default function AccountPanel({ setLogged }) {
+export default function AccountPanel({}) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {

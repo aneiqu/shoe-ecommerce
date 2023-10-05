@@ -1,8 +1,18 @@
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
 export default function NavMyAccountLarge() {
+  const [loggedIn, setLoggedIn] = useState(
+    JSON.parse(localStorage.getItem("logged"))
+  );
+
+  function handleLogOut() {
+    localStorage.setItem("logged", false);
+    setLoggedIn(false);
+  }
+
   return (
     <div className='group'>
       <div className='h-16 flex items-center  '>
@@ -29,12 +39,21 @@ export default function NavMyAccountLarge() {
         <div className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg'>
           <Link>FAQ</Link>
         </div>
-        <hr className='w-full' />
-        <div className='p-2 w-full'>
-          <span className='text-lg text-blue-700 cursor-pointer border-b-2 border-transparent hover:border-b-blue-700 transition-all duration-100'>
-            Log out
-          </span>
-        </div>
+        {JSON.parse(localStorage.getItem("logged")) && (
+          <>
+            <hr className='w-full' />
+            <div className='p-2 w-full'>
+              <Link to={"/"}>
+                <span
+                  className='text-lg text-blue-700 cursor-pointer border-b-2 border-transparent hover:border-b-blue-700 transition-all duration-100'
+                  onClick={handleLogOut}
+                >
+                  Log out
+                </span>
+              </Link>
+            </div>
+          </>
+        )}
 
         {/* <div>
           <Button

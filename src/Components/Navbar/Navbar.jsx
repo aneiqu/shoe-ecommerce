@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import DisplayLarge from "./NavbarLarge/DisplayLarge";
 import DisplaySmall from "./NavbarSmall/DisplaySmall";
 
-export default function Navbar() {
+export default function Navbar({ isLogged, setLogged }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
