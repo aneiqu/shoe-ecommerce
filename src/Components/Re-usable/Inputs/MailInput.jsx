@@ -1,4 +1,3 @@
-import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import { InputAdornment, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 

@@ -9,7 +9,7 @@ export default function Overview({ setContent, isActive, setIsActive }) {
   return (
     <div className='p-1'>
       <span
-        className={`hover:border-b-2 border-black cursor-pointer ${
+        className={`hover:border-b-2 text-lg border-black cursor-pointer ${
           isActive === "Overview" ? "font-semibold border-b-2" : ""
         }`}
         onClick={handleClick}

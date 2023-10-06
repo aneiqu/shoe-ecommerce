@@ -12,9 +12,9 @@ export default function PanelLarge() {
   const [active, setActive] = useState("Overview");
   return (
     <div className='flex w-screen justify-center mt-4'>
-      <div className='w-3/12 md:w-2/12 lg:w-1/12 border-r-2 border-black p-2'>
-        <div className='text-lg font-bold pb-2'>My Account</div>
-        <div className='flex flex-col'>
+      <div className='w-3/12 md:w-2/12 lg:w-1/12 border-r-2 h-full min-w-min border-black p-2'>
+        <div className='text-xl font-bold pb-2'>My Account</div>
+        <div className='flex flex-col ml-2'>
           <Overview
             setContent={setContent}
             isActive={active}
@@ -42,7 +42,7 @@ export default function PanelLarge() {
           />
         </div>
       </div>
-      <div className='w-3/5 p-2'>{content}</div>
+      <div className='w-2/4 p-2'>{content}</div>
     </div>
   );
 }

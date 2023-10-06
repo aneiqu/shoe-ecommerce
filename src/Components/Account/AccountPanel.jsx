@@ -34,7 +34,7 @@ export default function AccountPanel({}) {
 
   const Panel = screenWidth >= 640 ? <PanelLarge /> : <PanelSmall />;
 
-  return <div>{Panel}</div>;
+  return <div className=''>{Panel}</div>;
 
   // return (
   //   <div className='pt-2 flex flex-col items-center'>

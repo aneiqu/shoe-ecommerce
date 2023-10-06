@@ -1,6 +1,8 @@
+import MyDataContent from "./Content/MyDataContent";
+
 export default function MyData({ setContent, isActive, setIsActive }) {
   function handleClick() {
-    setContent(<MyData />);
+    setContent(<MyDataContent />);
     setIsActive("MyData");
   }
 
