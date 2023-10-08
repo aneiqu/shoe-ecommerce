@@ -30,12 +30,12 @@ export default function NavMyAccountLarge() {
         >
           <span>My account</span>
         </Link>
-        <div className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg'>
-          <Link>Orders</Link>
-        </div>
-        <div className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg'>
-          <Link>Return product</Link>
-        </div>
+        <Link to='/myaccount/orders' className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg'>
+          <span>Orders</span>
+        </Link>
+        <Link to='/myaccount/returns' className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg' >
+          <span>Return product</span>
+        </Link>
         <div className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg'>
           <Link>FAQ</Link>
         </div>
@@ -54,17 +54,6 @@ export default function NavMyAccountLarge() {
             </div>
           </>
         )}
-
-        {/* <div>
-          <Button
-            color='inherit'
-            className='w-3/5 md:w-2/5 m-5 bg-black text-white'
-            variant='contained'
-            onClick={handleLogOut}
-          >
-            Log out
-          </Button>
-        </div> */}
       </div>
     </div>
   );

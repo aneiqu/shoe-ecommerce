@@ -31,7 +31,7 @@ export default function LargeDisplay() {
           <Link to='/cart' className='px-2'>
             <ShoppingBagOutlinedIcon
               fontSize='large'
-              className='scale-90 hover:fill-slate-500 hover:scale-125 transition-all duration-150'
+              className='scale-90 hover:border-black border-b-2 border-transparent hover:scale-125 transition-all duration-150'
             />
           </Link>
         </div>

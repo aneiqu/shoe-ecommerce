@@ -17,7 +17,7 @@ import PanelLarge from "./PanelLarge/PanelLarge";
 import { useEffect, useState } from "react";
 import PanelSmall from "./PanelSmall/PanelSmall";
 
-export default function AccountPanel({}) {
+export default function AccountPanel({curActive, curContent}) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function AccountPanel({}) {
     };
   }, []);
 
-  const Panel = screenWidth >= 640 ? <PanelLarge /> : <PanelSmall />;
+  const Panel = screenWidth >= 640 ? <PanelLarge curActive={curActive} curContent={curContent} /> : <PanelSmall />;
 
   return <div className=''>{Panel}</div>;
 

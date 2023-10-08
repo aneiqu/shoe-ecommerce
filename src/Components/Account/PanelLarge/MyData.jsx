@@ -14,7 +14,7 @@ export default function MyData({ setContent, isActive, setIsActive }) {
         }`}
         onClick={handleClick}
       >
-        MyData
+        My Data
       </span>
     </div>
   );
