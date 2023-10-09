@@ -41,7 +41,7 @@ export default function LoginPanel({ setLogged }) {
           </Button>
         </Link>
       </div>
-      <FormFooter />
+      <FormFooter logoEnabled={true} />
     </div>
   );
 }

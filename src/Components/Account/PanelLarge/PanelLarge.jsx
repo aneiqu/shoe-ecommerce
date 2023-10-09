@@ -5,17 +5,16 @@ import Orders from "./Orders";
 import Returns from "./Returns";
 import MyData from "./MyData";
 import { useEffect, useState } from "react";
+import Footer from "../../Re-usable/Footer";
 
-export default function PanelLarge({curActive, curContent}) {
-
+export default function PanelLarge({ curActive, curContent }) {
   const [content, setContent] = useState(curContent);
   const [active, setActive] = useState(curActive);
 
-  useEffect(()=>{
-    setActive(curActive)
-    setContent(curContent)
-  },[curActive])
-  
+  useEffect(() => {
+    setActive(curActive);
+    setContent(curContent);
+  }, [curActive]);
 
   return (
     <div className='flex w-screen justify-center mt-4'>
@@ -50,6 +49,7 @@ export default function PanelLarge({curActive, curContent}) {
         </div>
       </div>
       <div className='w-2/4 p-2'>{content}</div>
+      <Footer />
     </div>
   );
 }
