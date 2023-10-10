@@ -3,8 +3,11 @@ import Footer from "./Components/Re-usable/Footer";
 
 function App() {
   return (
-    <div className='w-screen h-screen'>
-      <Navbar />
+    <div className='w-screen min-h-screen relative'>
+      <div className='pb-16'>
+        <Navbar />
+        {/* Content */}
+      </div>
       <Footer />
     </div>
   );

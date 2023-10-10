@@ -1,8 +1,50 @@
 [
-  { "id": "sh1", "name": "Shoe1", "price": 100 },
-  { "id": "sh2", "name": "Shoe2", "price": 150 },
-  { "id": "sh3", "name": "Shoe3", "price": 80 },
-  { "id": "sh4", "name": "Shoe4", "price": 200 },
-  { "id": "sh5", "name": "Shoe5", "price": 125 },
-  { "id": "sh6", "name": "Shoe6", "price": 105 }
+  {
+    "id": "sh1",
+    "name": "Shoe1",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 100,
+    "logo": "/shoe1.png"
+  },
+  {
+    "id": "sh2",
+    "name": "Shoe2",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 100,
+    "logo": "/shoe2.png"
+  },
+  {
+    "id": "sh3",
+    "name": "Shoe3",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 250,
+    "logo": "/shoe3.png"
+  },
+  {
+    "id": "sh4",
+    "name": "Shoe4",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 184,
+    "logo": "/shoe4.png"
+  },
+  {
+    "id": "sh5",
+    "name": "Shoe5",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 80,
+    "logo": "/shoe5.png"
+  },
+  {
+    "id": "sh6",
+    "name": "Shoe6",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "logo": "/shoe6.png"
+  }
 ]
