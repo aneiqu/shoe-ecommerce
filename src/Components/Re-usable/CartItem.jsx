@@ -1,56 +1,96 @@
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-
-import { Button, FormControl, MenuItem, Select } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import itemsData from "../../Data/ExampleShoes.json";
+import DescriptionSmall from "../Cart/DescriptionSmall";
+import DescriptionLarge from "../Cart/DescriptionLarge";
 
 export default function CartItem({ id }) {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [quantity, setQuantity] = useState(1);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const item = itemsData.find((el) => el.id === id);
+
+  const Description =
+    screenWidth >= 640 ? (
+      <DescriptionLarge
+        item={item}
+        quantity={quantity}
+        setQuantity={setQuantity}
+      />
+    ) : (
+      <DescriptionSmall
+        item={item}
+        quantity={quantity}
+        setQuantity={setQuantity}
+      />
+    );
 
   function handleChange(e) {
     setQuantity(e.target.value);
   }
 
   return (
-    <div className='flex w-11/12 mx border-b-2 border-slate-600 justify-between text-lg shadow-lg my-2'>
-      <div className='w-44 h-44'>
+    <div className='flex flex-row m-2 ml-0'>
+      <div className='h-32 w-32'>
         <img
-          className='min-w-44 min-h-44 w-44 h-44 bg-slate-200'
+          className='h-32 w-32 bg-slate-200'
           src={require(`../../Images/Shoes${item.logo}`)}
         ></img>
       </div>
-      <div className='w-6/12'>
-        <div className='flex flex-col m-3'>
-          <span>{item.name}</span>
-          <span>{item.style}</span>
-          <span>Size: 10</span>
-        </div>
-        <FormControl className='w-3/12 m-3 mb-0 '>
-          <Select
-            value={quantity}
-            className='h-10'
-            onChange={(e) => handleChange(e)}
-          >
-            <MenuItem value={1}>1</MenuItem>
-            <MenuItem value={2}>2</MenuItem>
-            <MenuItem value={3}>3</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-      <div className='flex w-2/12 justify-end'>
-        <span className='p-2'>${item.price * quantity}</span>
-      </div>
-      <div className='flex flex-col '>
-        <Button>
-          <CloseOutlinedIcon />
-        </Button>
-        <Button>
-          <FavoriteBorderOutlinedIcon />
-        </Button>
-      </div>
+      {Description}
     </div>
   );
+}
+
+{
+  // <div className='flex w-min lg:min-w-full mx border-b-2 border-slate-600 justify-between text-lg shadow-lg my-2'>
+  //   <div className='min-w-44 min-h-44 h-44 w-44'>
+  //     <img
+  //       className='min-w-44 min-h-44 h-44 w-44 bg-slate-200'
+  //       src={require(`../../Images/Shoes${item.logo}`)}
+  //     ></img>
+  //   </div>
+  //   <div className='w-6/12'>
+  //     <div className='flex flex-col m-3'>
+  //       <span>{item.name}</span>
+  //       <span className='text-ellipsis w-max overflow-hidden whitespace-nowrap'>
+  //         {item.style}
+  //       </span>
+  //       <span>Size: 10</span>
+  //     </div>
+  //     <FormControl className='w-4/12 lg:w-16 m-3 mb-0 '>
+  //       <Select
+  //         value={quantity}
+  //         className='h-10'
+  //         onChange={(e) => handleChange(e)}
+  //       >
+  //         <MenuItem value={1}>1</MenuItem>
+  //         <MenuItem value={2}>2</MenuItem>
+  //         <MenuItem value={3}>3</MenuItem>
+  //       </Select>
+  //     </FormControl>
+  //   </div>
+  //   <div className='flex w-2/12 justify-end'>
+  //     <span className='p-2'>${item.price * quantity}</span>
+  //   </div>
+  //   <div className='flex flex-col '>
+  //     <Button>
+  //       <CloseOutlinedIcon />
+  //     </Button>
+  //     <Button>
+  //       <FavoriteBorderOutlinedIcon />
+  //     </Button>
+  //   </div>
+  // </div>
 }

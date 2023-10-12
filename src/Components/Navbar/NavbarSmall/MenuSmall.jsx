@@ -17,11 +17,11 @@ export default function SmallMenu() {
         <MenuOutlinedIcon fontSize='large' />
       </div>
       <div
-        className={`absolute left-0 top-0 w-0 h-screen bg-white duration-200 ${
+        className={`absolute left-0 top-0 w-0 h-screen bg-white duration-300 ${
           isVisible ? "visible w-[100%]" : "invisible"
         }`}
       >
-        <div>
+        <div className={`${isVisible ? "visible" : "invisible"}`}>
           <div className='flex justify-between h-16 items-center'>
             <div className='flex w-11/12 justify-center'>
               <Logo />

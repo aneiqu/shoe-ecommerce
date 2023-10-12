@@ -27,7 +27,7 @@ export default function MyDataContent() {
             </div>
           </div>
           <div className='flex w-full flex-col lg:ml-2'>
-            <span className='font-bold'>Your Phone number</span>
+            <span className='font-bold'>Your Phone Number</span>
             <div>{phoneNumber}</div>
           </div>
         </div>

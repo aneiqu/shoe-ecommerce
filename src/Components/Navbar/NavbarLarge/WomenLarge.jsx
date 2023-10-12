@@ -4,7 +4,7 @@ export default function WomenLarge() {
       <p className='font-bold border-b-2 py-5 border-transparent hover:border-black group-hover:border-black'>
         WOMEN
       </p>
-      <div className='invisible absolute left-0 flex flex-col w-screen group-hover:visible bg-slate-100 bg-opacity-95 p-5'>
+      <div className='invisible absolute left-0 flex flex-col w-screen group-hover:visible bg-slate-100 bg-opacity-95 p-5 z-10'>
         <div className='flex flex-row justify-around'>
           <a
             href='./'
