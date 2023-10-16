@@ -1,13 +1,49 @@
 import { Button } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import CartItem from "../Re-usable/CartItem";
 import Footer from "../Re-usable/Footer";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function ProperCart({ items }) {
   const logged = JSON.parse(localStorage.getItem("logged"));
-  const cart = items.map((el) => <CartItem key={el.id} id={el.id}></CartItem>);
-  const curPrice = items.reduce((acc, curVal) => acc + curVal.price, 0);
+
+  const [price, setPrice] = useState(
+    items.map((el) => {
+      return { price: el.price, id: el.id };
+    })
+  );
+
+  const test = (e) => {
+    setPrice((prev) => [
+      ...prev.map((el) => {
+        if (el.id === e.id) {
+          return { price: e.price, id: el.id };
+        }
+        return el;
+      }),
+    ]);
+    console.log(e);
+    //   console.log(e.id);
+    //   // const existing = price.findIndex((el) => el.id === e.id);
+    //   // if (existing !== -1) {
+    //   //   const newArray = [...price].map((el) =>
+    //   //     el.id === e.id ? (el.price = e.price) : "test"
+    //   //   );
+    //   //   setPrice(newArray);
+    //   // } else {
+    //   //   setPrice((prev) => [...prev, { price: e.price, id: e.id }]);
+    //   // }
+  };
+
+  useEffect(() => {
+    console.log(price);
+  }, [price]);
+
+  const cart = items.map((el) => (
+    <CartItem key={el.id} id={el.id} test={test}></CartItem>
+  ));
+  const curPrice = price.reduce((acc, curVal) => acc + curVal.price, 0);
+
   const totalItems = items.length
     ? items.length > 1
       ? `${items.length} items`
@@ -15,16 +51,27 @@ export default function ProperCart({ items }) {
     : "0";
 
   const deliveryPrice = curPrice.toFixed(2) > 100 ? "Free" : `$${18.9}`;
+
   return (
     <div className='relative min-h-screen mt-2 pb-16'>
       <div className='ml-2'>
         <span className='uppercase text-4xl font-bold'>Your bag</span>
         <div>
           <span className='text-lg'>TOTAL: ({totalItems}) -</span>
-          <span className='font-bold text-lg'> ${curPrice}</span>
+          <span className='font-bold text-lg'>
+            {" "}
+            ${price.reduce((acc, curVal) => acc + curVal.price, 0)}
+          </span>
         </div>
         <span className='text-md '>Items in your bag are not reserved.</span>
         <div className='w-max'>{cart}</div>
+      </div>
+      <div>
+        {!logged && (
+          <Link to='/myaccount'>
+            <Button>Login and checkout faster</Button>
+          </Link>
+        )}
       </div>
       <Footer />
     </div>

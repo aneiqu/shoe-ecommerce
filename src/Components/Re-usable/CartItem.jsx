@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import itemsData from "../../Data/ExampleShoes.json";
-import DescriptionSmall from "../Cart/DescriptionSmall";
-import DescriptionLarge from "../Cart/DescriptionLarge";
+import { default as CartItemContentLarge } from "../Cart/CartItemContentLarge";
+import { default as CartItemContentSmall } from "../Cart/CartItemContentSmall";
 
-export default function CartItem({ id }) {
+export default function CartItem({ id, test }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [quantity, setQuantity] = useState(1);
 
@@ -23,22 +23,19 @@ export default function CartItem({ id }) {
 
   const Description =
     screenWidth >= 640 ? (
-      <DescriptionLarge
+      <CartItemContentLarge
         item={item}
         quantity={quantity}
         setQuantity={setQuantity}
+        test={test}
       />
     ) : (
-      <DescriptionSmall
+      <CartItemContentSmall
         item={item}
         quantity={quantity}
         setQuantity={setQuantity}
       />
     );
-
-  function handleChange(e) {
-    setQuantity(e.target.value);
-  }
 
   return (
     <div className='flex flex-row m-2 ml-0'>
@@ -46,6 +43,7 @@ export default function CartItem({ id }) {
         <img
           className='h-32 w-32 bg-slate-200'
           src={require(`../../Images/Shoes${item.logo}`)}
+          alt='Shoe'
         ></img>
       </div>
       {Description}
