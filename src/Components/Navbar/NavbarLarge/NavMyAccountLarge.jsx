@@ -23,7 +23,7 @@ export default function NavMyAccountLarge() {
           />
         </Link>
       </div>
-      <div className='absolute z-10 flex flex-col invisible group-hover:visible w-44 right-12 bg-white border-[1px] border-gray-500 delay-75'>
+      <div className='absolute z-10 flex flex-col invisible group-hover:visible w-44 right-12 bg-white border-[1] border-gray-300 delay-75'>
         <Link
           to='/myaccount'
           className='p-2 w-full hover:bg-gray-300 cursor-pointer text-lg'

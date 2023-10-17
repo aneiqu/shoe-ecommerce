@@ -43,19 +43,21 @@ export default function ProperCart({ items }) {
 
   return (
     <div className='relative min-h-screen mt-2 pb-16 flex flex-col md:flex-row justify-center'>
-      <div className='ml-2'>
-        <span className='uppercase text-4xl font-bold'>Your bag</span>
-        <div>
-          <span className='text-lg'>TOTAL: ({totalItems}) -</span>
-          <span className='font-bold text-lg'>${curPrice}</span>
+      <div className='flex flex-col items-center'>
+        <div className='ml-2'>
+          <span className='uppercase text-4xl font-bold'>Your bag</span>
+          <div>
+            <span className='text-lg'>TOTAL: ({totalItems}) -</span>
+            <span className='font-bold text-lg'>${curPrice}</span>
+          </div>
+          <span className='text-md '>Items in your bag are not reserved.</span>
+          <div className='w-max'>{cart}</div>
         </div>
-        <span className='text-md '>Items in your bag are not reserved.</span>
-        <div className='w-max'>{cart}</div>
       </div>
       <div className='m-10'>
         {!logged && (
           <Link to='/myaccount'>
-            <Button className='p-0'>Login and checkout faster</Button>
+            <Button className=' p-0'>Login and checkout faster</Button>
           </Link>
         )}
         <div className=' w-full'>
@@ -91,35 +93,4 @@ export default function ProperCart({ items }) {
       <Footer />
     </div>
   );
-}
-
-{
-  /* <div className='flex w-9/12 flex-col items-center lg:items-end'>
-          <div className='m-10 flex w-2/3 justify-start lg:justify-start'>
-            <div className='flex flex-col '>
-              <div>
-                <span className='uppercase text-4xl font-bold'>Your bag</span>
-                <div>
-                  <span className='text-lg'>TOTAL: ({totalItems}) -</span>
-                  <span className='font-bold text-lg'> ${curPrice}</span>
-                </div>
-                <span className='text-md '>
-                  Items in your bag are not reserved.
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className='w-2/3 flex flex-col items-center lg:items-start m-10'>
-            {cart}
-          </div>
-        </div>
-        <div className='flex flex-col w-3/12 items-start pb-2 mb-10 h-min border-slate-600 border-b-2'>
-          {!logged && (
-            <Link to='/myaccount'>
-              <Button>Login and checkout faster</Button>
-            </Link>
-          )}
-
-          </div>
-        </div> */
 }

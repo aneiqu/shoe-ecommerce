@@ -20,7 +20,7 @@ export default function Navbar({ isLogged, setLogged }) {
   const Navbar = screenWidth >= 640 ? <DisplayLarge /> : <DisplaySmall />;
 
   return (
-    <nav className='flex justify-between w-screen h-16 items-center border-b-[1px]'>
+    <nav className='flex justify-between w-screen h-16 border-b-[1px] items-center'>
       {Navbar}
     </nav>
   );

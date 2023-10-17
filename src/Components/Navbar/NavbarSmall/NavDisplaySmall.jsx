@@ -13,19 +13,19 @@ export default function SmallDisplay() {
         <Logo />
       </div>
       <div>
-        <Link to='/myaccount'>
+        <Link to='/myaccount' className='m-1'>
           <PersonOutlineOutlinedIcon
             fontSize='large'
-            className='m-1 active:bg-slate-300'
+            className='active:bg-slate-300'
           />
         </Link>
-        <a>
-          <SearchIcon fontSize='large' className='m-1 active:bg-slate-300' />
-        </a>
-        <Link to='/cart' className='px-2'>
+        <Link to='/' className='m-1'>
+          <SearchIcon fontSize='large' className='active:bg-slate-300' />
+        </Link>
+        <Link to='/cart' className='m-1'>
           <ShoppingBagOutlinedIcon
             fontSize='large'
-            className='m-1 active:bg-slate-300'
+            className='active:bg-slate-300'
           />
         </Link>
       </div>

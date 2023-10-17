@@ -4,7 +4,14 @@ import LogoPng from "../../Images/Logo/Logo.png";
 export default function Logo() {
   return (
     <Link to='/'>
-      <img src={LogoPng} className='m-2 h-12 w-14 md:h-14 md:w-14' />
+      <div className='flex items-center'>
+        <img
+          alt='logo'
+          src={LogoPng}
+          className='m-2 h-10 w-10 md:h-12 md:w-12'
+        />
+        <span className='font-bold'>Buma</span>
+      </div>
     </Link>
   );
 }
