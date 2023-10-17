@@ -17,11 +17,10 @@ export default function Navbar({ isLogged, setLogged }) {
     };
   }, []);
 
-  // Changing what is displayed based on current screenwidth
   const Navbar = screenWidth >= 640 ? <DisplayLarge /> : <DisplaySmall />;
 
   return (
-    <nav className='flex justify-between w-screen h-16 items-center shadow-md'>
+    <nav className='flex justify-between w-screen h-16 items-center border-b-[1px]'>
       {Navbar}
     </nav>
   );

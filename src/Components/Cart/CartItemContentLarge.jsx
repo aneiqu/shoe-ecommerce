@@ -8,14 +8,14 @@ export default function CartItemContentLarge({
   item,
   quantity,
   setQuantity,
-  test,
+  updateTotalPrice,
 }) {
   function handleChange(e) {
     setQuantity(e.target.value);
   }
 
   useEffect(() => {
-    test({ price: item.price * quantity, id: item.id });
+    updateTotalPrice({ price: item.price * quantity, id: item.id });
   }, [quantity]);
   return (
     <div className='flex ml-2'>
@@ -23,7 +23,7 @@ export default function CartItemContentLarge({
         <span>{item.name}</span>
         <span>{item.style}</span>
         <span>{item.size}</span>
-        <FormControl>
+        <FormControl className='pb-2'>
           <Select
             value={quantity}
             className='h-10 w-20'

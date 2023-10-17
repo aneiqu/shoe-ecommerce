@@ -1,9 +1,9 @@
-import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import SmallMenu from "./MenuSmall";
 import { Link } from "react-router-dom";
 import Logo from "../../Re-usable/Logo";
+import SmallMenu from "./MenuSmall";
 
 export default function SmallDisplay() {
   return (
@@ -22,7 +22,7 @@ export default function SmallDisplay() {
         <a>
           <SearchIcon fontSize='large' className='m-1 active:bg-slate-300' />
         </a>
-        <Link to='/cart'>
+        <Link to='/cart' className='px-2'>
           <ShoppingBagOutlinedIcon
             fontSize='large'
             className='m-1 active:bg-slate-300'
