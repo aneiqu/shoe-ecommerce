@@ -1,8 +1,8 @@
-import ReturnsContent from "./Content/ReturnsContent";
+import ReturnsContentLarge from "./Content/ContentLarge/ReturnsContentLarge";
 
 export default function Returns({ setContent, isActive, setIsActive }) {
   function handleClick() {
-    setContent(<ReturnsContent />);
+    setContent(<ReturnsContentLarge />);
     setIsActive("Returns");
   }
 

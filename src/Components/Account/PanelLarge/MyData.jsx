@@ -1,8 +1,8 @@
-import MyDataContent from "./Content/MyDataContent";
+import MyDataContentLarge from "./Content/ContentLarge/MyDataContentLarge";
 
 export default function MyData({ setContent, isActive, setIsActive }) {
   function handleClick() {
-    setContent(<MyDataContent />);
+    setContent(<MyDataContentLarge />);
     setIsActive("MyData");
   }
 

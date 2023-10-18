@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { Routes, Route, HashRouter } from "react-router-dom";
-import Cart from "./Components/Cart/Cart";
 import MyAccount from "./Components/Account/MyAccount";
+import OrdersContentLarge from "./Components/Account/PanelLarge/Content/ContentLarge/OrdersContentLarge";
+import OverviewContentLarge from "./Components/Account/PanelLarge/Content/ContentLarge/OverviewContentLarge";
+import ReturnsContentLarge from "./Components/Account/PanelLarge/Content/ContentLarge/ReturnsContentLarge";
 import RegisterAccount from "./Components/Account/RegisterAccount";
-import OrdersContent from "./Components/Account/PanelLarge/Content/OrdersContent";
-import ReturnsContent from "./Components/Account/PanelLarge/Content/ReturnsContent";
-import OverviewContent from "./Components/Account/PanelLarge/Content/OverviewContent";
+import Cart from "./Components/Cart/Cart";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,10 +18,34 @@ root.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/myaccount' element={<MyAccount curActive={"Overview"} curContent={<OverviewContent/>}/>} />
+        <Route
+          path='/myaccount'
+          element={
+            <MyAccount
+              curActive={"Overview"}
+              curContent={<OverviewContentLarge />}
+            />
+          }
+        />
         <Route path='/myaccount/register' element={<RegisterAccount />} />
-        <Route path='/myaccount/orders' element={<MyAccount curActive={"Orders"} curContent={<OrdersContent/>} />} />
-        <Route path='/myaccount/returns' element={<MyAccount curActive={"Returns"} curContent={<ReturnsContent/>} />} />
+        <Route
+          path='/myaccount/orders'
+          element={
+            <MyAccount
+              curActive={"Orders"}
+              curContent={<OrdersContentLarge />}
+            />
+          }
+        />
+        <Route
+          path='/myaccount/returns'
+          element={
+            <MyAccount
+              curActive={"Returns"}
+              curContent={<ReturnsContentLarge />}
+            />
+          }
+        />
       </Routes>
     </HashRouter>
   </React.StrictMode>

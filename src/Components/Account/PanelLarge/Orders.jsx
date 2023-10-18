@@ -1,8 +1,8 @@
-import OrdersContent from "./Content/OrdersContent";
+import OrdersContentLarge from "./Content/ContentLarge/OrdersContentLarge";
 
 export default function Orders({ setContent, isActive, setIsActive }) {
   function handleClick() {
-    setContent(<OrdersContent />);
+    setContent(<OrdersContentLarge />);
     setIsActive("Orders");
   }
 

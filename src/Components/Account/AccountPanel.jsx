@@ -1,23 +1,23 @@
 import { Autocomplete, Button, TextField } from "@mui/material";
-import FormInput from "../Re-usable/Inputs/FormInput";
+import { useEffect, useState } from "react";
 import Countries from "../../Data/Countries.json";
 import FormFooter from "../Re-usable/FormFooter";
-import NameInput from "../Re-usable/Inputs/NameInput";
-import MiddleNameInput from "../Re-usable/Inputs/MiddleNameInput";
+import CityInput from "../Re-usable/Inputs/Address/CityInput";
+import CountryInput from "../Re-usable/Inputs/Address/CountryInput";
+import StreetInput from "../Re-usable/Inputs/Address/StreetInput";
+import ZipInput from "../Re-usable/Inputs/Address/ZipInput";
+import BirthInput from "../Re-usable/Inputs/BirthInput";
+import FormInput from "../Re-usable/Inputs/FormInput";
+import GenderInput from "../Re-usable/Inputs/GenderInput";
 import LastNameInput from "../Re-usable/Inputs/LastNameInput";
 import MailInput from "../Re-usable/Inputs/MailInput";
+import MiddleNameInput from "../Re-usable/Inputs/MiddleNameInput";
+import NameInput from "../Re-usable/Inputs/NameInput";
 import PhoneInput from "../Re-usable/Inputs/PhoneInput";
-import BirthInput from "../Re-usable/Inputs/BirthInput";
-import GenderInput from "../Re-usable/Inputs/GenderInput";
-import StreetInput from "../Re-usable/Inputs/Address/StreetInput";
-import CountryInput from "../Re-usable/Inputs/Address/CountryInput";
-import ZipInput from "../Re-usable/Inputs/Address/ZipInput";
-import CityInput from "../Re-usable/Inputs/Address/CityInput";
 import PanelLarge from "./PanelLarge/PanelLarge";
-import { useEffect, useState } from "react";
 import PanelSmall from "./PanelSmall/PanelSmall";
 
-export default function AccountPanel({curActive, curContent}) {
+export default function AccountPanel({ curActive, curContent }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -32,7 +32,12 @@ export default function AccountPanel({curActive, curContent}) {
     };
   }, []);
 
-  const Panel = screenWidth >= 640 ? <PanelLarge curActive={curActive} curContent={curContent} /> : <PanelSmall />;
+  const Panel =
+    screenWidth >= 640 ? (
+      <PanelLarge curActive={curActive} curContent={curContent} />
+    ) : (
+      <PanelSmall />
+    );
 
   return <div className=''>{Panel}</div>;
 

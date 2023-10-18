@@ -1,10 +1,10 @@
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import WomenLarge from "./WomenLarge";
-import MenLarge from "./MenLarge";
 import { Link } from "react-router-dom";
 import Logo from "../../Re-usable/Logo";
+import MenLarge from "./MenLarge";
 import NavMyAccountLarge from "./NavMyAccountLarge";
+import WomenLarge from "./WomenLarge";
 
 export default function LargeDisplay() {
   return (
@@ -18,9 +18,13 @@ export default function LargeDisplay() {
       </div>
       <div className='w-2/4 flex flex-row justify-end items-center h-16'>
         <form className='relative px-2'>
-          <SearchIcon fontSize='medium' className='absolute my-1.5 ml-0.5' />
+          <SearchIcon
+            sx={{ stroke: "#ffffff", strokeWidth: 1 }}
+            fontSize='medium'
+            className='absolute my-1.5 ml-0.5'
+          />
           <input
-            className='border-0 py-1.5 pl-7 ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:outline-none focus:ring-black focus:pr-20 duration-150'
+            className='border-0 py-1.5 pl-7 ring-1 w-max ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:outline-none focus:ring-black focus:pr-20 duration-150'
             placeholder='Search'
           ></input>
         </form>
@@ -30,8 +34,9 @@ export default function LargeDisplay() {
         <div className='flex items-center h-full'>
           <Link to='/cart' className='px-2'>
             <ShoppingBagOutlinedIcon
+              sx={{ stroke: "#ffffff", strokeWidth: 1 }}
               fontSize='large'
-              className='scale-90 hover:border-black border-b-2 border-transparent hover:scale-125 transition-all duration-150 mr-3'
+              className='scale-125 hover:border-black border-b-[1px] border-transparent hover:scale-150 transition-all duration-150 mr-3'
             />
           </Link>
         </div>

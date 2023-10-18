@@ -1,6 +1,6 @@
-import ContinueShoppingBtn from "../../../Re-usable/ContinueShoppingBtn";
+import ContinueShoppingBtn from "../../../../Re-usable/ContinueShoppingBtn";
 
-export default function OverviewContent() {
+export default function OverviewContentLarge() {
   return (
     <div className='m-2'>
       <div>

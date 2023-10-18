@@ -15,7 +15,7 @@ export default function PanelSmall({ curActive, curContent }) {
   }, [curActive]);
 
   return (
-    <div className='flex overflow-auto pb-2'>
+    <div className='flex overflow-auto pb-2 w-full'>
       <div className='border-[1px] border-gray-500 p-2'>
         <Overview
           setContent={setContent}

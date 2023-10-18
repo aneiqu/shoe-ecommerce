@@ -1,6 +1,5 @@
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import { useState } from "react";
-
 import { Link } from "react-router-dom";
 
 export default function NavMyAccountLarge() {
@@ -18,8 +17,9 @@ export default function NavMyAccountLarge() {
       <div className='h-16 flex items-center  '>
         <Link to='/myaccount' className='px-2 '>
           <PersonOutlineOutlinedIcon
+            sx={{ stroke: "#ffffff", strokeWidth: 1 }}
             fontSize='large'
-            className='scale-90 group-hover:scale-125  group-hover:border-b-2 border-black transition-all duration-150'
+            className='scale-125 group-hover:scale-150  group-hover:border-b-[1px] border-black transition-all duration-150'
           />
         </Link>
       </div>

@@ -1,10 +1,10 @@
-import { useState } from "react";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import { Button } from "@mui/material";
+import { useState } from "react";
 
-export default function MyDataContent() {
+export default function MyDataContentLarge() {
   const [name, setName] = useState("Jerry");
   const [lastName, setLastName] = useState("Berry");
   const [phoneNumber, setPhoneNumber] = useState("+48 123456789");

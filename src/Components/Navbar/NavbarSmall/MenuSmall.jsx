@@ -1,6 +1,6 @@
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../Re-usable/Logo";
@@ -46,24 +46,36 @@ export default function SmallMenu() {
               <div className='flex w-11/12 justify-center'>
                 <Logo />
               </div>
-              <a className='m-4 active:bg-slate-300' onClick={toggleVisibility}>
-                <CloseOutlinedIcon fontSize='large' className='' />
-              </a>
+              <CloseOutlinedIcon
+                fontSize='large'
+                className='m-4 active:bg-slate-300'
+                onClick={toggleVisibility}
+              />
             </div>
             <hr />
             <MenSmall />
             <WomenSmall />
           </div>
-          {loggedIn && (
-            <Link to={"/"}>
-              <span
-                className='text-lg text-blue-700 cursor-pointer border-b-2 border-transparent hover:border-b-blue-700 transition-all duration-100'
-                onClick={handleLogOut}
-              >
-                Log out
+
+          <div className='flex flex-col m-2'>
+            <div className='flex flex-row items-center justify-between'>
+              <span className='text-lg font-normal cursor-pointer my-2'>
+                Help
               </span>
-            </Link>
-          )}
+              <ArrowForwardIosOutlinedIcon />
+            </div>
+            <hr />
+            {loggedIn && (
+              <Link className='my-2' to={"/"}>
+                <span
+                  className='text-lg font-normal cursor-pointer'
+                  onClick={handleLogOut}
+                >
+                  Log out
+                </span>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

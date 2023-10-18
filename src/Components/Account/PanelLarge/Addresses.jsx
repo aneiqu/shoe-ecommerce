@@ -1,6 +1,8 @@
+import { default as AddressesContentLarge } from "./Content/ContentLarge/AddressesContentLarge";
+
 export default function Addresses({ setContent, isActive, setIsActive }) {
   function handleClick() {
-    setContent(<Addresses />);
+    setContent(<AddressesContentLarge />);
     setIsActive("Addresses");
   }
 

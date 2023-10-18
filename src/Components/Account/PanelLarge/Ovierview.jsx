@@ -1,8 +1,8 @@
-import OverviewContent from "./Content/OverviewContent";
+import OverviewContentLarge from "./Content/ContentLarge/OverviewContentLarge";
 
 export default function Overview({ setContent, isActive, setIsActive }) {
   function handleClick() {
-    setContent(<OverviewContent />);
+    setContent(<OverviewContentLarge />);
     setIsActive("Overview");
   }
 

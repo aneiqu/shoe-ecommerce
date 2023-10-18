@@ -10,7 +10,6 @@ export default function Logo() {
           src={LogoPng}
           className='m-2 h-10 w-10 md:h-12 md:w-12'
         />
-        <span className='font-bold'>Buma</span>
       </div>
     </Link>
   );

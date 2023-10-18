@@ -1,7 +1,7 @@
 export default function MenLarge() {
   return (
     <div className='group'>
-      <p className='font-bold border-b-2 py-5 border-transparent hover:border-black group-hover:border-black'>
+      <p className='font-semibold border-b-2 py-5 border-transparent hover:border-black group-hover:border-black  transition-all duration-75'>
         MEN
       </p>
       <div className='invisible absolute left-0 flex flex-col w-screen group-hover:visible bg-slate-100 bg-opacity-95 p-5 z-10'>
