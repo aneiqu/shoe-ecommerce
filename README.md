@@ -3,13 +3,14 @@
 Resposnive shoe ecommerce project made using React
 
 ## Features:
-Full responsibility (Mobile / PC)
-a) Store - WIP
+Full responsibility (Mobile / PC) </br>
+a) Store - WIP</br>
 b) Account:
 - Registration  & Login - WIP
 - Edtiable personal data - WIP
 - Editable password - WIP
-- Orders & Returns - Currently placeholder
+- Orders & Returns - Currently placeholder</br>
+
 c) Cart:
 - Adding & removing items from cart - WIP
 - Favourites products - WIP
