@@ -39,7 +39,7 @@ export default function AccountPanel({ curActive, curContent }) {
       <PanelSmall />
     );
 
-  return <div className=''>{Panel}</div>;
+  return <div>{Panel}</div>;
 
   // return (
   //   <div className='pt-2 flex flex-col items-center'>

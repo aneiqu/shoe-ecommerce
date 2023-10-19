@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import Addresses from "../../Re-usable/AccountReusables/Addresses";
+import MyData from "../../Re-usable/AccountReusables/MyData";
+import Orders from "../../Re-usable/AccountReusables/Orders";
+import Overview from "../../Re-usable/AccountReusables/Overview";
+import Returns from "../../Re-usable/AccountReusables/Returns";
 import Footer from "../../Re-usable/Footer";
-import Addresses from "./Addresses";
-import MyData from "./MyData";
-import Orders from "./Orders";
-import Overview from "./Ovierview";
-import Returns from "./Returns";
 
 export default function PanelLarge({ curActive, curContent }) {
   const [content, setContent] = useState(curContent);
@@ -25,26 +25,31 @@ export default function PanelLarge({ curActive, curContent }) {
               setContent={setContent}
               isActive={active}
               setIsActive={setActive}
+              display={"large"}
             />
             <Orders
               setContent={setContent}
               isActive={active}
               setIsActive={setActive}
+              display={"large"}
             />
             <Returns
               setContent={setContent}
               isActive={active}
               setIsActive={setActive}
+              display={"large"}
             />
             <MyData
               setContent={setContent}
               isActive={active}
               setIsActive={setActive}
+              display={"large"}
             />
             <Addresses
               setContent={setContent}
               isActive={active}
               setIsActive={setActive}
+              display={"large"}
             />
           </div>
         </div>

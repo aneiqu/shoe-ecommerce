@@ -1,6 +1,7 @@
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../Re-usable/Logo";
@@ -9,13 +10,13 @@ import WomenSmall from "./WomenSmall";
 export default function SmallMenu() {
   const [isVisible, setIsVisible] = useState(false);
 
+  const logged = localStorage.getItem("logged");
+
   const toggleVisibility = () => {
     setIsVisible((prev) => !prev);
   };
 
-  const [loggedIn, setLoggedIn] = useState(
-    JSON.parse(localStorage.getItem("logged"))
-  );
+  const [loggedIn, setLoggedIn] = useState(JSON.parse(logged));
 
   function handleLogOut() {
     localStorage.setItem("logged", false);
@@ -23,16 +24,23 @@ export default function SmallMenu() {
   }
 
   useEffect(() => {
-    setLoggedIn(JSON.parse(localStorage.getItem("logged")));
-  }, [localStorage.getItem("logged")]);
+    setLoggedIn(JSON.parse(logged));
+  }, [logged]);
+
+  useEffect(() => {
+    isVisible ? disableBodyScroll(document) : enableBodyScroll(document);
+  }, [isVisible]);
 
   return (
-    <div className='group z-10'>
+    <div className='group '>
       <div className='m-2 active:bg-slate-300' onClick={toggleVisibility}>
-        <MenuOutlinedIcon fontSize='large' />
+        <MenuOutlinedIcon
+          sx={{ stroke: "#ffffff", strokeWidth: 1 }}
+          fontSize='large'
+        />
       </div>
       <div
-        className={`absolute left-0 top-0 w-0 h-screen bg-white duration-300 ${
+        className={`fixed z-10 overflow-hidden left-0 top-0 w-0 h-screen bg-white duration-300 ${
           isVisible ? "visible w-[100%]" : "invisible"
         }`}
       >
@@ -47,6 +55,7 @@ export default function SmallMenu() {
                 <Logo />
               </div>
               <CloseOutlinedIcon
+                sx={{ stroke: "#ffffff", strokeWidth: 1 }}
                 fontSize='large'
                 className='m-4 active:bg-slate-300'
                 onClick={toggleVisibility}
@@ -62,7 +71,9 @@ export default function SmallMenu() {
               <span className='text-lg font-normal cursor-pointer my-2'>
                 Help
               </span>
-              <ArrowForwardIosOutlinedIcon />
+              <ArrowForwardIosOutlinedIcon
+                sx={{ stroke: "#ffffff", strokeWidth: 1 }}
+              />
             </div>
             <hr />
             {loggedIn && (

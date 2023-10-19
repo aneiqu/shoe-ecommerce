@@ -1,9 +1,9 @@
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { Link } from "react-router-dom";
 import Logo from "../../Re-usable/Logo";
 import SmallMenu from "./MenuSmall";
+import SearchSmall from "./SerachSmall";
 
 export default function SmallDisplay() {
   return (
@@ -12,18 +12,18 @@ export default function SmallDisplay() {
       <div>
         <Logo />
       </div>
-      <div>
+      <div className='flex flex-row'>
         <Link to='/myaccount' className='m-1'>
           <PersonOutlineOutlinedIcon
+            sx={{ stroke: "#ffffff", strokeWidth: 1 }}
             fontSize='large'
             className='active:bg-slate-300'
           />
         </Link>
-        <Link to='/' className='m-1'>
-          <SearchIcon fontSize='large' className='active:bg-slate-300' />
-        </Link>
+        <SearchSmall />
         <Link to='/cart' className='m-1'>
           <ShoppingBagOutlinedIcon
+            sx={{ stroke: "#ffffff", strokeWidth: 1 }}
             fontSize='large'
             className='active:bg-slate-300'
           />
