@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import MyAccount from "./Components/Account/MyAccount";
 import OrdersContentLarge from "./Components/Account/PanelLarge/Content/ContentLarge/OrdersContentLarge";
@@ -8,13 +8,14 @@ import OverviewContentLarge from "./Components/Account/PanelLarge/Content/Conten
 import ReturnsContentLarge from "./Components/Account/PanelLarge/Content/ContentLarge/ReturnsContentLarge";
 import RegisterAccount from "./Components/Account/RegisterAccount";
 import Cart from "./Components/Cart/Cart";
+import ProductPage from "./Components/Re-usable/Prodcuts/ProductPage/ProductPage";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/cart' element={<Cart />} />
@@ -46,8 +47,12 @@ root.render(
             />
           }
         />
+        <Route
+          path='/products/:productName/:productId'
+          element={<ProductPage />}
+        />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

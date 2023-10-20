@@ -43,7 +43,7 @@ export default function CartItem({ id, updateTotalPrice }) {
       <div className='h-32 w-32'>
         <img
           className='h-32 w-32 bg-slate-200'
-          src={require(`../../Images/Shoes${item.logo}`)}
+          src={require(`../../Images/Shoes${item.img}`)}
           alt='Shoe'
         ></img>
       </div>

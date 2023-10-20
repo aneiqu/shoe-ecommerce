@@ -2,49 +2,205 @@
   {
     "id": "sh1",
     "name": "Shoe1",
+    "category": "Sport",
     "style": "Red / White / Black",
     "size": 12,
     "price": 100,
-    "logo": "/shoe1.png"
+    "img": "/shoe1.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
   },
   {
     "id": "sh2",
     "name": "Shoe2",
+    "category": "Sport",
     "style": "Red / White / Black",
     "size": 12,
     "price": 100,
-    "logo": "/shoe2.png"
+    "img": "/shoe2.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
   },
   {
     "id": "sh3",
     "name": "Shoe3",
+    "category": "Sport",
     "style": "Red / White / Black",
     "size": 12,
     "price": 250,
-    "logo": "/shoe3.png"
+    "img": "/shoe3.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
   },
   {
     "id": "sh4",
     "name": "Shoe4",
+    "category": "Sport",
     "style": "Red / White / Black",
     "size": 12,
     "price": 184,
-    "logo": "/shoe4.png"
+    "img": "/shoe4.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
   },
   {
     "id": "sh5",
     "name": "Shoe5",
+    "category": "Sport",
     "style": "Red / White / Black",
     "size": 12,
     "price": 80,
-    "logo": "/shoe5.png"
+    "img": "/shoe5.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
   },
   {
     "id": "sh6",
     "name": "Shoe6",
+    "category": "Sport",
     "style": "Red / White / Black",
     "size": 12,
     "price": 452,
-    "logo": "/shoe6.png"
+    "img": "/shoe6.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh7",
+    "name": "Shoe7",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe4.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh8",
+    "name": "Shoe8",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe2.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh9",
+    "name": "Shoe9",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe3.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh10",
+    "name": "Shoe10",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe1.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh11",
+    "name": "Shoe11",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe5.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh12",
+    "name": "Shoe12",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe6.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh13",
+    "name": "Shoe13",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe4.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh14",
+    "name": "Shoe14",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe1.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh15",
+    "name": "Shoe15",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe5.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh16",
+    "name": "Shoe16",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe2.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
+  },
+  {
+    "id": "sh17",
+    "name": "Shoe17",
+    "category": "Sport",
+    "style": "Red / White / Black",
+    "size": 12,
+    "price": 452,
+    "img": "/shoe3.png",
+    "discount": false,
+    "_discountType": "Be aware that discount value is in %",
+    "discountValue": 10
   }
 ]
