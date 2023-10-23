@@ -5,9 +5,9 @@ import StoreContent from "./Components/StoreContent/StoreContent";
 function App() {
   return (
     <div className='w-screen min-h-screen relative'>
-      <div className='pb-16'>
+      <div className='pb-16 flex flex-col items-center '>
         <Navbar />
-        <div className='w-screen flex justify-center'>
+        <div className='w-screen lg:w-2/3 flex justify-center'>
           <StoreContent />
         </div>
       </div>
