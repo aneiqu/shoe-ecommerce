@@ -1,3 +1,7 @@
+## Project status
+**[Project on hold]**
+This project is currently on hold until I learn more and feel confident to continue working on it.
+
 # About
 
 Resposnive shoe ecommerce project made using React
